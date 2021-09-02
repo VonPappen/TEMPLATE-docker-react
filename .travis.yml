@@ -14,8 +14,16 @@ deploy:
   app: "docker-react-2"
   env: "Dockerreact2-env"
   bucket_name: "elasticbeanstalk-eu-west-3-934116018902"
+  # Can be found on AWS S3
   bucket_path: "docker-react-2"
+  # Name of the app
   on:
     branch: master
+  # Generate an acces key id and a secret key access from AWS-IAM
+  # https://console.aws.amazon.com/iamv2/home?#/users
+  # 
+  # Set the keys to Travis-ci in
+  # https://app.travis-ci.com/github/VonPappen/docker-react/settings
+  #  --> Environment variables
   access_key_id: $AWS_ACCES_KEY
   secret_access_key: $AWS_SECRET_KEY
